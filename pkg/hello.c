@@ -41,18 +41,22 @@ int main(){
 //            else
 //                printf("不正常");
 
-int i=1;
-
-switch(i%3){
-    case 1:
-        printf("1");
-    case 2:
-        printf("2");
-    case 3:
-        printf("3");
-    case 4:
-        printf("4");
-}
+//int i=1;
+//
+//switch(i%3){
+//    case 1:
+//        printf("1");
+//    case 2:
+//        printf("2");
+//    case 3:
+//        printf("3");
+//    case 4:
+//        printf("4");
+//}
+//for(int i =10;i>1;i/=2){
+//    printf("%d\n",i++);
+//}
+    printf("char=%llu\n",sizeof(char));
 
 
 }
@@ -95,4 +99,6 @@ int high_double(){
     printf("(%f+%f/12)*0.3048=%f\n",a,b,(a + b/12)*0.3048);
     return 0;
 }
+
+
 
