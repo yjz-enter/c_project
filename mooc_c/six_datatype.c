@@ -3,6 +3,7 @@
 //
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
 
 
 /**
@@ -111,6 +112,54 @@ int nine_nine_table(){
 
 int prime_number(){
     int m,n;
+    scanf("%d,%d",&m,&n);
+
+    for (int i = m; i <n ; ++i) {
+        int sum=0;
+        int count=0;
+        for (int j = 1; j < i; ++j) {
+            if(i%j==0){
+                sum+=i;
+                count++;
+
+            }
+        }
+        if(count==1){
+            printf("sum=%dcount=%d \n",sum,count);
+        }
+
+
+    }
+
+
+}
+/**
+* 猜数字游戏是令系统随机产生一个100以内的正整数,用户输入一个数对其进行猜测,需要你编写程序自动对其与随机产生的被狗青数进行比
+较,并提示大了("Toobig"),还是小了("Toosmall"),相等表示猜到了。如果猜到,则结束程序。程序还要求统计挑的次数)如果1次
+猜出该数,提示"Bingo!";如果3次以内猜到该数,则提示"LuckyYou!";如果超过3次但是在N(>3)次以内(包括第N次)猜到该数,则
+提示"Good Guess!";如果超过N次都没有猜到,则提示"Game Over,并结束程序。如果在到达N次之前,用户输入了一个负数,也输
+出"GameOver",并结束程序。
+输入格式:
+输入第一行中给出2个不超过100的正整数,分别是系统产生的随机数、以及猜测的最大次数N。随后每行给出一个用户的输入,直到出现负数
+为止。
+输入样例:
+58 4
+70
+50
+56
+58
+60
+-2
+输出样例:
+Too big
+Too small
+Too small
+Good Guess!
+*/
+
+int guess_number(){
+    int m,n;
+    int m= rand();
     scanf("%d,%d",&m,&n);
 
     for (int i = m; i <n ; ++i) {
